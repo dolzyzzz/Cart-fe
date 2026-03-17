@@ -1,0 +1,19 @@
+<div class="container">
+  <div id="items-list-container">
+    <h3>I tuoi articoli</h3>
+    <ul class="list-group" id="items-list">
+      @for (item of items; track item.id) {
+        <li class="list-group-item item">
+         <app-cart-item [item]="item"></app-cart-item>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="mt-5">
+    <h3>Totale ordine</h3>
+    <div class="order-summary">
+     <app-summary [item] = "item"></app-summary>
+    </div>
+  </div>
+</div>
